@@ -8,10 +8,10 @@ get '/' do
   erb :home
 end
 
-get '/:word' do          #get the word and call the trasnlate funciton on it
+# get '/:word' do          #get the word and call the trasnlate funciton on it
 
-  "#{PigLatin.latin params[:word]}"
-end
+#   "#{PigLatin.latin params[:word]}"
+# end
 
 
 post '/translate' do
@@ -25,10 +25,10 @@ post '/translate' do
   # end
 end
 
-get '/sports' do
-  @title = 'Sports'
-  erb :sports
-end
+# get '/sports' do
+#   @title = 'Sports'
+#   erb :sports
+# end
 
 
 
