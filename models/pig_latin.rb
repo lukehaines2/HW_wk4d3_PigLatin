@@ -2,13 +2,11 @@ class PigLatin
 
   def self.latin word
 
-    get word[0] = ['a','e','i','o','u'] do |variable|
-      
+    if word.start_with?('a','e','i','o','u')
+      word.concat "ay"
+    else first_letter = word.slice!(0)
+      word + first_letter + "ay"
     end
-    word[0].upcase.concat word[1..word.length]
-
-  else word
-
   end
 
 end
