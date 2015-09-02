@@ -5,7 +5,8 @@
 <% end %>
 
 <form action="/translate" method="post">
-<!-- <form action="/article" method="post"></form> -->
-  <input type="text" name="destination" autofocus> <!-- AUTOFOCUS is the thing that puts the cursor in the text field, just like in google. -->
+  <input type="text" name="word" autofocus>
   <button>Translate</button>
-  </form>
+</form>
+
+<p> <%= @translation %> </p>

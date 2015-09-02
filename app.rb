@@ -13,15 +13,17 @@ get '/:word' do          #get the word and call the trasnlate funciton on it
   "#{PigLatin.latin params[:word]}"
 end
 
-post '/translate' do
-  case params[:destination].downcase
-  when 'sports' then redirect to '/sports'
-  else
-    @error = 'Invalid page selected you moron!'
-    erb :home
-  end
-end
 
+post '/translate' do
+  @translation = PigLatin.latin params[:word]
+  erb :home
+  # case params[:destination].downcase
+  # when 'sports' then redirect to '/sports'
+  # else
+  #   @error = 'Invalid page selected you moron!'
+  #   erb :home
+  # end
+end
 
 get '/sports' do
   @title = 'Sports'
